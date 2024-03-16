@@ -19,4 +19,12 @@ fun main() {
     val calendar = Calendar.getInstance()
     val formattedDate = String.format(Locale.of("ES", "es"), "%1\$tF", calendar)
     println(formattedDate)
+    val s = """
+        Esto
+        es
+        una
+        cadena
+        multilinea.
+    """.trimIndent()
+    println(s)
 }
