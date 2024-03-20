@@ -5,7 +5,6 @@ package com.jmendezv.kotlin4jp.seccion_03.leccion_07
 *
 * */
 
-import com.jmendezv.kotlin4jp.leccion_07.entidades.*
 import com.jmendezv.kotlin4jp.seccion_03.leccion_07.entidades.Estudiante
 
 fun main() {
