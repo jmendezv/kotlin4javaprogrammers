@@ -1,7 +1,7 @@
 package com.jmendezv.kotlin4jp.seccion_03.leccion_07
 
 /*
-* LOS PAQUETES Y IMPORTS
+* LECCIÓN 07: LOS PAQUETES Y IMPORTS
 *
 * */
 

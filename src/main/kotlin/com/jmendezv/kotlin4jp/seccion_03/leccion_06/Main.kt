@@ -2,6 +2,10 @@ package com.jmendezv.kotlin4jp.seccion_03.leccion_06
 
 import java.util.*
 
+/*
+* LECCIÓN 06: LOS TIPOS BÁSICOS
+*
+* */
 fun main() {
     val l = 1L
     val ul = 1UL

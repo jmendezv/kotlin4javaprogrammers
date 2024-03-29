@@ -30,6 +30,7 @@ class SimpleClass
 * añadir métodos estáticos en las clases de Kotlin. Típicamente son métodos de factoría
 * para la creación de instacias complejas de la propia clase que la contiene.
 * */
+
 final class Estudiante constructor(
     val id: Long,
     val nombre: String,
@@ -65,6 +66,7 @@ final class Estudiante constructor(
 }
 
 fun main() {
+    // En Kotlin no se requiere el operador 'new'
     val sc = SimpleClass()
     val e = Estudiante("Mariana")
     e.nota = 9.9

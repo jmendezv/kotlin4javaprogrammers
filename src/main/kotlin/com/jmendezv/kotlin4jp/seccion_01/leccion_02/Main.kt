@@ -1,5 +1,10 @@
 package com.jmendezv.kotlin4jp.seccion_01.leccion_02
 
+/*
+* LECCIÓN 02: ¿PORQUÉ ESTE CURSO?
+*
+* */
+
 data class Estudiante(val nombre: String)
 
 /*

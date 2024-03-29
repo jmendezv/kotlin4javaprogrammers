@@ -1,5 +1,9 @@
 package com.jmendezv.kotlin4jp.seccion_02.leccion_04
 
+/*
+* LECCIÓN 04: LOS IDIOMS
+*
+* */
 fun miFuncion(): Any = TODO("Pendiente")
 
 fun main() {

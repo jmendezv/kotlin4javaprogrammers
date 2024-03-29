@@ -3,6 +3,10 @@ package com.jmendezv.kotlin4jp.seccion_03.leccion_08
 import com.jmendezv.kotlin4jp.seccion_03.leccion_08.datos.DatosIterables
 import com.jmendezv.kotlin4jp.seccion_03.leccion_08.datos.MasDatosIterables
 
+/*
+* LECCIÓN 08: EL CONTROL FLOW
+*
+* */
 fun main() {
     val a = 1
     val b = 2
