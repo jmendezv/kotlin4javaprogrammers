@@ -8,7 +8,7 @@ fun miFuncion(): Any = TODO("Pendiente")
 
 fun main() {
     var a = 1
-    var b = 2
+    var b: Int = 2
     // Intercambio de dos variables sin variable temporal
     a = b.also { b = a }
     // String template $variable o ${expresión}

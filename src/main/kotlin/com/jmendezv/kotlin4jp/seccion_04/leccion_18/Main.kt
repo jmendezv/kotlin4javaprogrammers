@@ -3,9 +3,11 @@ package com.jmendezv.kotlin4jp.seccion_04.leccion_18
 /*
 * LECCION 18: LOS GENERICOS
 *
+* Se utilizan en clases contenedoras
+*
 * */
 
-class Box<T>(var item: T)
+data class Box<T>(var item: T)
 
 fun main() {
     // Instanciación formal

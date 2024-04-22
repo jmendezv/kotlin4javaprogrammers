@@ -3,10 +3,8 @@ package com.jmendezv.kotlin4jp.seccion_05.leccion_25
 /*
 * LECCIÓN 25: HIGHER-ORDER FUNCTIONS
 *
-* Un ejemplo de higher-order function es la función fold() de la librería
-* de Kotlin, que se puede aplicar acualquier colección porque es una función
-* de extensión de la interfaz Collections.
-*
+* Un ejemplo de higher-order function es la función fold() de la librería de Kotlin, que se puede aplicar acualquier
+* colección porque es una función de extensión de la interfaz Collections.
 * */
 
 fun <T, R> Collection<T>.fold(
@@ -31,7 +29,7 @@ val g = fun(acum: Int, siguiente: String): Int = acum + siguiente.length
 * de la forma (A, B) -> C, en tanto en cuanto, implemente el método invoke().
 * El método invoke() se ejecuta a modo de constructor
 * */
-class StringTransformer: (Int, String) -> Int {
+class StringTransformer : (Int, String) -> Int {
     override fun invoke(p1: Int, p2: String): Int {
         return p1 + p2.trim().length
     }

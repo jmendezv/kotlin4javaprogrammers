@@ -7,25 +7,14 @@ import kotlin.properties.Delegates
 *
 * */
 
-
 /*
-* El patrón observable
+* El patrón Observable
 * */
 class Deposito(val ident: Long, nivelInicial: Double) {
     var nivel: Double by Delegates.observable(nivelInicial) { property, oldValue, newValue ->
         if (newValue < 50.0) {
             throw Exception("Depósito #$ident tiene $newValue l. por debajo del 50%")
         }
-    }
-
-    fun libera(flujo: Double): Unit {
-        nivel -= flujo
-    }
-}
-
-class DepositoConVeto(val ident: Long, nivelInicial: Double) {
-    var nivel: Double by Delegates.vetoable(nivelInicial) { property, oldValue, newValue ->
-        newValue >= 50
     }
 
     fun libera(flujo: Double): Unit {
@@ -46,9 +35,4 @@ fun main() {
     } catch (e: Exception) {
         println(e.message)
     }
-    val depositoConVeto = DepositoConVeto(983434534L, 100.0)
-    depositoConVeto.libera(30.0) // 70L. OK
-    println(depositoConVeto.nivel)
-    depositoConVeto.libera(30.0) // 40L. La operación está vetada y no se descuentan los 30 litros
-    println(depositoConVeto.nivel)
 }

@@ -21,8 +21,7 @@ open class A(
 }
 
 /*
-* La clase B es una subclase de A, por tanto, hereda sus propiedades
-* no privadas
+* La clase B es una subclase de A, por tanto, hereda sus propiedades no privadas
 * */
 class B : A(10, 20,30 ) {
     init {
@@ -37,6 +36,6 @@ class B : A(10, 20,30 ) {
 fun main() {
     val b = B()
     println(b.a)
-    // println(b.b) // Error
-    // println(b.c) // Error
+    // println(b.b) // Error private
+    // println(b.c) // Error protected
 }

@@ -18,18 +18,20 @@ data class Estudiante(val id: Long, val nombre: String, var nota: Int) {
         }
 }
 
-
 fun main() {
     val estudiante1 = Estudiante(1234567890, "Juan", 8)
     val estudiante2 = Estudiante(9876543210, "Anna", 9)
     println(estudiante1)
+    // Igualdad según el método equals()
     println(estudiante1 == estudiante2)
+    // Igualdad según si ocupan la misma dirección de memória
+    println(estudiante1 === estudiante2)
     println(estudiante1.hashCode())
     println(estudiante2.hashCode())
+    // La data class proporciona, entre otros, el método copy()
     val estudiante3 = estudiante1.copy(id = 23456713450, nota = 7)
     println(estudiante3)
-    // destructuring declaration utiliza las funciones componentN() por
-    // orden, de izquierda a derecha
+    // destructuring declaration utiliza las funciones componentN() por orden, de izquierda a derecha
     val (id, nombre, nota) = estudiante3
     println("[$id - $nombre - $nota]")
 }

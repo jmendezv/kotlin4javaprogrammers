@@ -32,9 +32,11 @@ enum class ProtocolState {
 
 fun main() {
     for (dia in DiasLaborables.entries)
-        println("${dia.ordinal} ${dia.name}")
+        print("${dia.ordinal}-${dia.name} ")
+    println()
     println(DiasLaborables.valueOf("LUNES"))
     println(DiasLaborables.LUNES.name)
     println(DiasLaborables.LUNES.ordinal)
-    println(DiasLaborables.valueOf("L U N E S"))
+    println(DiasLaborables.LUNES < DiasLaborables.MARTES)
+    // println(DiasLaborables.valueOf("L U N E S")) // Error: No enum constant
 }

@@ -1,15 +1,14 @@
 package com.jmendezv.kotlin4jp.seccion_03.leccion_07
 
+import com.jmendezv.kotlin4jp.seccion_03.leccion_07.entidades.Estudiante
+
 /*
-* LECCIÓN 07: LOS PAQUETES Y IMPORTS
+* LECCIÓN 07: LOS PAQUETES Y LA ORDEN IMPORT
 *
 * */
 
-import com.jmendezv.kotlin4jp.seccion_03.leccion_07.entidades.Estudiante
 
 fun main() {
-    val e = Estudiante("Mariana", "31/08/2010", 8.9)
-//    println(e.nombre) // Error de acceso: nombre es privado
-    println(e.fdn)
-//    println(e.nota) // Error de acceso: nota es protected y estamos en otro paquete
+    val estudiante = Estudiante("Mariana", "31/08/2010", 8.9)
+    println(estudiante)
 }

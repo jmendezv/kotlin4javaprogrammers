@@ -1,8 +1,8 @@
 package com.jmendezv.kotlin4jp.seccion_05.leccion_27
 
 /*
-* La función de extensión fold() tiene dos parámetros, un valor inicial
-* y una función que debe pasarse como argumento fuera de los paréntesis.
+* La función de extensión fold() tiene dos parámetros, un valor inicial y una función que debe pasarse como argumento
+* fuera de los paréntesis en forma de laambda.
 * */
 fun main() {
     val lista = listOf(1, 2, 3, 4, 5)

@@ -6,7 +6,6 @@ import kotlin.random.Random
 /*
 * LECCIÓN 11: CLASES
 *
-*
 * */
 
 class SimpleClass

@@ -14,27 +14,22 @@ enum class TipoDeError {
 }
 
 /*
-* Los constructore de una clase sellada pueden ser protected (por defecto)
-* o privado, que todavia ofrecen más seguridad
+* Los constructores de una clase sellada pueden ser protected (por defecto) o private,
+* que todavia ofrecen más seguridad.
 * */
 sealed class Error private constructor(val tipoDeError: TipoDeError) {
-    class ErrorDeLectura(val nombreFichero: String): Error(TipoDeError.LEVE)
-    class ErrorDeBaseDeDatos(val tabla: String, val consulta: String):
-            Error(TipoDeError.IMPORTANTE)
-    class ErrorDeServidor(): Error(TipoDeError.MUY_CRITICO)
+    class ErrorDeLectura(val nombreFichero: String) : Error(TipoDeError.LEVE)
+    class ErrorDeBaseDeDatos(val tabla: String, val consulta: String) : Error(TipoDeError.IMPORTANTE)
+    class ErrorDeServidor() : Error(TipoDeError.MUY_CRITICO)
 }
 
-/*
-* Error, el constructor de la clase Error es privado
-*
-* La estructura when no necesita la rama 'else' porque el compilador
-* sabe que se han tratado todos los casos posible.
-*
-* */
+// class ErrorDesconocido : Error(TipoDeError.MODERADO)
 
 fun main() {
-    val error:Error = Error.ErrorDeLectura("movimienetos.txt")
-    when(error) {
+    val error: Error = Error.ErrorDeLectura("movimienetos.txt")
+    // La estructura when no necesita la rama 'else' porque el compilador sabe que se han tratado
+    // todos los casos posible
+    when (error) {
         is Error.ErrorDeLectura -> println("Error de lectura")
         is Error.ErrorDeBaseDeDatos -> println("Error de BD")
         is Error.ErrorDeServidor -> println("Error de Servidor")
