@@ -11,7 +11,6 @@ import kotlin.time.measureTime
 *
 * */
 
-
 fun main() {
     println("main() comienza")
     println("\tHilo actual ${Thread.currentThread().name}")

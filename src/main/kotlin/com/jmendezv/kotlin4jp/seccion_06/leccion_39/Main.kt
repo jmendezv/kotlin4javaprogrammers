@@ -6,16 +6,13 @@ package com.jmendezv.kotlin4jp.seccion_06.leccion_39
 * */
 
 typealias Predicado<T> = (T) -> Boolean
-
 data class Clave(val id: Long)
 data class Valor(val msg: String)
 
 typealias Mapa = Map<Clave, Valor>
-
 class A {
     inner class Interna
 }
-
 class B {
     inner class Interna
 }

@@ -3,11 +3,10 @@ package com.jmendezv.kotlin4jp.seccion_06.leccion_36
 /*
 * LECCIÓN 36: LAS EXCEPCIONES
 *
-*
 * */
 
 // Podemos crear nuestras propias excepciones aunque no es recomendable
-class AlgoFueMalException(override val message: String): Throwable(message)
+class AlgoFueMalException(override val message: String) : Throwable(message)
 
 fun upps(msg: String): Nothing = throw IllegalArgumentException(msg)
 

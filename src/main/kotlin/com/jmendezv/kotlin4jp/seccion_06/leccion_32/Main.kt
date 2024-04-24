@@ -3,6 +3,8 @@ package com.jmendezv.kotlin4jp.seccion_06.leccion_32
 /*
 * LECCION 32: LA EXPRESIÓN 'THIS' Y 'SUPER'
 *
+* En general, 'this' se refiere a la instancia actual y 'super' a la super clase
+*
 * */
 
 // En este contexto 'this' se refiere al objeto actual, por ejemplo m

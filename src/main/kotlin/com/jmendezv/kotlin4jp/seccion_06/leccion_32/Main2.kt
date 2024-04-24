@@ -1,8 +1,7 @@
 package com.jmendezv.kotlin4jp.seccion_06.leccion_32
 
 /*
-* Este ejemplo extraido de la documentación oficial de Kotlin
-* ilustra el uso de 'this' etiquetado
+* Este ejemplo extraido de la documentación oficial de Kotlin ilustra el uso de 'this' etiquetado
 *
 * */
 class A { // implicit label @A

@@ -2,7 +2,7 @@ package com.jmendezv.kotlin4jp.seccion_06.leccion_40
 
 /*
 * LECCION 40: LAS SECUENCIAS Sequence<T>
-*
+* Una secuencia puede ser finita o infinita
 * */
 
 fun main() {

@@ -3,14 +3,12 @@ package com.jmendezv.kotlin4jp.seccion_07.leccion_46
 import kotlinx.coroutines.*
 import java.io.BufferedReader
 import java.io.File
-import kotlin.io.encoding.*
 import kotlin.time.measureTime
 
 /*
 * LECCIÓN 46: UN EJEMPLO COMPLETO
 *
-* Este ejemplo suma las cantidades de dos fichero asincronamente
-* y calcula el saldo final.
+* Este ejemplo suma las cantidades de dos fichero asincronamente y calcula el saldo final.
 *
 * */
 

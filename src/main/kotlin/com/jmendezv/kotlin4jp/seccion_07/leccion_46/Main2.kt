@@ -5,8 +5,7 @@ import kotlin.time.measureTime
 /*
 * LECCIÓN 46: UN EJEMPLO COMPLETO
 *
-* Este ejemplo suma las cantidades de dos fichero scuencialmente
-* y calcula el saldo final.
+* Este ejemplo suma las cantidades de dos fichero scuencialmente y calcula el saldo final.
 *
 * */
 

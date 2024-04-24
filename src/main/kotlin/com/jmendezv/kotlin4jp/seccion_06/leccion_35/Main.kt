@@ -5,7 +5,6 @@ package com.jmendezv.kotlin4jp.seccion_06.leccion_35
 *
 * */
 
-
 fun main() {
     var s1: String = "cadena"
     println(s1.length)

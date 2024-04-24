@@ -29,13 +29,14 @@ fun main() {
     println("main() acaba")
 }
 
-suspend fun temperaturaPrevista() {
+suspend fun temperaturaPrevista(): Unit {
     println("\tHilo actual ${Thread.currentThread().name}")
     // delay() es una función suspend
     delay(1000)
     println("Temperatura: 30\u00b0C")
 }
-suspend fun previsionMeteorologica() {
+
+suspend fun previsionMeteorologica(): Unit {
     println("\tHilo actual ${Thread.currentThread().name}")
     delay(1500)
     println("Previsión: Soleado")

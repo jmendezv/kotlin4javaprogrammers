@@ -3,7 +3,6 @@ package com.jmendezv.kotlin4jp.seccion_07.leccion_45
 import kotlinx.coroutines.*
 import kotlin.time.measureTime
 
-
 fun main() {
     println("main() comienza")
     val elapsedTime = measureTime {

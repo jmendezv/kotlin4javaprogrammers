@@ -11,7 +11,7 @@ import kotlin.time.measureTime
 * en producción. Crea un contexto de Coroutine que permite ejecutar otras
 * primitivas.
 *
-* La mala noticia es que runBlcoking es síncrono y dentro de un bloque
+* La mala noticia es que runBlocking es síncrono y dentro de un bloque
 * runBlocking las llamadas son secuenciales! Como ves en este fragmento de
 * código, el tiempo transcurrido es la suma de los dos retardos aproximadamente.
 *

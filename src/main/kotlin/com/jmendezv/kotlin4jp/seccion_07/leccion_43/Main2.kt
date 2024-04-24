@@ -30,6 +30,7 @@ suspend fun temperaturaPrevista2(): String {
     delay(1000)
     return ("Temperatura: 30\u00b0C")
 }
+
 suspend fun previsionMeteorologica2(): String {
     println("\tHilo actual ${Thread.currentThread().name}")
     delay(1500)
