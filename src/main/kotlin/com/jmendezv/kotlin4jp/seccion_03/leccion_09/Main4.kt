@@ -11,7 +11,7 @@ fun higherOrderFunction(f: () -> Unit): Unit = f()
 
 fun sayHi() = println("Hola mundo.")
 fun main() {
-    higherOrderFunction(fun() = println("Hola Mundo."))
-    higherOrderFunction(::sayHi)
-    higherOrderFunction { println("Hola Mundo.") }
+   higherOrderFunction(fun() = println("Hola Mundo."))
+   higherOrderFunction(::sayHi)
+   higherOrderFunction { println("Hola Mundo.") }
 }

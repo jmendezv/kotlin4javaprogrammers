@@ -16,14 +16,14 @@ fun Int.entre(a: Int, b: Int): Boolean = this in a..b
 
 // primoYPar es una propiedad de tipo boolean de la clase Int
 val Int.primoYPar: Boolean
-    get() = this == 2
+   get() = this == 2
 
 fun main() {
-    println(3.impar())
-    println(6.par())
-    println(5.entre(0, 10))
-    for (i in 1..5)
-        if (i.primoYPar)
-            break
-        else println(i)
+   println(3.impar())
+   println(6.par())
+   println(5.entre(0, 10))
+   for (i in 1..5)
+      if (i.primoYPar)
+         break
+      else println(i)
 }

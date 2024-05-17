@@ -13,6 +13,8 @@ typealias Peso = Double
 infix fun Peso.imc(altura: Double) = this / altura.pow(2)
 
 fun main() {
-    println(79.35.imc(1.8))
-    // Invocación de la función imc() con notación infija
+   println(79.35.imc(1.8))
+   // Invocación de la función imc() con notación infija
+   println(79.35 imc 1.8)
+
 }

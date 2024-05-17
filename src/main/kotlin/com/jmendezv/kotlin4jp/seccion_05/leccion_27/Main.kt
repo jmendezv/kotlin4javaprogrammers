@@ -12,6 +12,6 @@ val sum1: (Int, Int) -> Int = { x: Int, y: Int -> x + y }
 val sum2 = { x: Int, y: Int -> x + y }
 
 fun main() {
-    println(sum1(1, 2))
-    println(sum2(1, 2))
+   println(sum1(1, 2))
+   println(sum2(1, 2))
 }

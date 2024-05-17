@@ -24,12 +24,12 @@ package com.jmendezv.kotlin4jp.seccion_04.leccion_21
 * */
 
 val holaMundo = object {
-    val saludo = "Hola Mundo"
-    override fun toString() = "$saludo, desde un objeto."
+   val saludo = "Hola Mundo"
+   override fun toString() = "$saludo, desde un objeto."
 }
 
 interface Driver {
-    fun connect(url: String): Boolean
+   fun connect(url: String): Boolean
 }
 
 class Server(val driver: Driver)
@@ -39,7 +39,7 @@ class Server(val driver: Driver)
 * */
 
 interface Factory<T> {
-    fun create(): T
+   fun create(): T
 }
 
 /*
@@ -53,30 +53,30 @@ interface Factory<T> {
 
 class MyClass {
 
-    companion object Companion : Factory<MyClass> {
-        @JvmStatic
-        override fun create(): MyClass = MyClass()
-    }
+   companion object Companion : Factory<MyClass> {
+      @JvmStatic
+      override fun create(): MyClass = MyClass()
+   }
 }
 
 fun main() {
-    println(holaMundo)
-    holaMundo.also {
-        println(it.toString())
-    }
-    // Implementación de la interfaz Driver con un object
-    val server = Server(object : Driver {
-        override fun connect(url: String): Boolean {
-            // ...
-            return true
-        }
-    })
+   println(holaMundo)
+   holaMundo.also {
+      println(it.toString())
+   }
+   // Implementación de la interfaz Driver con un object
+   val server = Server(object : Driver {
+      override fun connect(url: String): Boolean {
+         // ...
+         return true
+      }
+   })
 
-    if (server.driver.connect("http://whatever/resource"))
-        println("conectado")
-    else
-        println("algo fué mal")
-    val portatil1 = Portatil
-    println(portatil1)
-    val portatil2 = Portatil
+   if (server.driver.connect("http://whatever/resource"))
+      println("conectado")
+   else
+      println("algo fué mal")
+   val portatil1 = Portatil
+   println(portatil1)
+   val portatil2 = Portatil
 }

@@ -32,33 +32,33 @@ CREATE TABLE Persons (
 data class Person(val id: Int, val lastName: String, val firstName: String, var age: Int)
 
 fun main() {
-    val jdbcUrl: String = "jdbc:mysql://localhost:3306/kotlin4javaprogrammers"
-    val connection: Connection = DriverManager
-        .getConnection(jdbcUrl, "root", "admin")
-    // println(connection.isValid(0))
-    // the query is only prepared not executed
-    val query: PreparedStatement = connection.prepareStatement("SELECT * FROM Persons")
+   val jdbcUrl: String = "jdbc:mysql://localhost:3306/kotlin4javaprogrammers"
+   val connection: Connection = DriverManager
+      .getConnection(jdbcUrl, "root", "admin")
+   // println(connection.isValid(0))
+   // the query is only prepared not executed
+   val query: PreparedStatement = connection.prepareStatement("SELECT * FROM Persons")
 
-    // the query is executed and results are fetched
-    val result: ResultSet = query.executeQuery()
+   // the query is executed and results are fetched
+   val result: ResultSet = query.executeQuery()
 
-    // an empty list for holding the results
-    val users: MutableList<Person> = mutableListOf<Person>()
+   // an empty list for holding the results
+   val users: MutableList<Person> = mutableListOf<Person>()
 
-    while(result.next()){
+   while (result.next()) {
 
-        // getting the value of the id column
-        val id: Int = result.getInt("id")
+      // getting the value of the id column
+      val id: Int = result.getInt("id")
 
-        // getting the value of the name column
-        val lastName: String = result.getString("lastName")
-        val firstName: String = result.getString("firstName")
-        val age: Int = result.getInt("age")
+      // getting the value of the name column
+      val lastName: String = result.getString("lastName")
+      val firstName: String = result.getString("firstName")
+      val age: Int = result.getInt("age")
 
-        // constructing a User object and putting data into the list
+      // constructing a User object and putting data into the list
 
-        users.add(Person(id, lastName, firstName, age))
-    }
+      users.add(Person(id, lastName, firstName, age))
+   }
 
-    users.forEach(::println)
+   users.forEach(::println)
 }

@@ -11,15 +11,15 @@ class AlgoFueMalException(override val message: String) : Throwable(message)
 fun upps(msg: String): Nothing = throw IllegalArgumentException(msg)
 
 fun main() {
-    // x tiene como tipo Nothing?
-    val x: Nothing? = null
-    // l tiene como tipo List<Nothing?>
-    val l: List<Nothing?> = listOf(null)
-    try {
-        upps("uhmmmmm")
-    } catch (e: IllegalArgumentException) {
-        println(e.message)
-    } finally {
-        println("En finally")
-    }
+   // x tiene como tipo Nothing?
+   val x: Nothing? = null
+   // l tiene como tipo List<Nothing?>
+   val l: List<Nothing?> = listOf(null)
+   try {
+      upps("uhmmmmm")
+   } catch (e: IllegalArgumentException) {
+      println(e.message)
+   } finally {
+      println("En finally")
+   }
 }

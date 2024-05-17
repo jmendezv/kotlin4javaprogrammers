@@ -19,47 +19,47 @@ const val FILE_PATH_SALIDAS: String = "salidas.txt"
 * Versión concurrente
 * */
 fun main() {
-    val elapsedTime = measureTime {
-        runBlocking {
-            println(calculaSaldo())
-        }
-    }
-    println("Tiempo de ejecución $elapsedTime")
+   val elapsedTime = measureTime {
+      runBlocking {
+         println(calculaSaldo())
+      }
+   }
+   println("Tiempo de ejecución $elapsedTime")
 }
 
 /*
 * Un coroutineScope
 * */
 suspend fun calculaSaldo() = coroutineScope {
-    val sumaEntradas: Deferred<Double> = async(start = CoroutineStart.LAZY) {
-        try {
-            calculaSuma(FILE_PATH_ENTRADAS)
-        } catch (e: Exception) {
-            0.0
-        }
+   val sumaEntradas: Deferred<Double> = async(start = CoroutineStart.LAZY) {
+      try {
+         calculaSuma(FILE_PATH_ENTRADAS)
+      } catch (e: Exception) {
+         0.0
+      }
 
-    }
-    val sumaSalidas: Deferred<Double> = async(start = CoroutineStart.LAZY) {
-        try {
-            calculaSuma(FILE_PATH_SALIDAS)
-        } catch (e: Exception) {
-            0.0
-        }
+   }
+   val sumaSalidas: Deferred<Double> = async(start = CoroutineStart.LAZY) {
+      try {
+         calculaSuma(FILE_PATH_SALIDAS)
+      } catch (e: Exception) {
+         0.0
+      }
 
-    }
-    val totalEntradas = sumaEntradas.await()
-    val totalSalidas = sumaSalidas.await()
-    val saldo = totalEntradas - totalSalidas
-    String.format("%+.2f€", saldo)
+   }
+   val totalEntradas = sumaEntradas.await()
+   val totalSalidas = sumaSalidas.await()
+   val saldo = totalEntradas - totalSalidas
+   String.format("%+.2f€", saldo)
 }
 
 fun calculaSuma(fichero: String): Double {
 
-    val ficheroReader: BufferedReader = File(fichero).bufferedReader()
-    var suma = 0.0
-    ficheroReader.forEachLine {
-        suma += it.toDouble()
-    }
+   val ficheroReader: BufferedReader = File(fichero).bufferedReader()
+   var suma = 0.0
+   ficheroReader.forEachLine {
+      suma += it.toDouble()
+   }
 
-    return suma
+   return suma
 }

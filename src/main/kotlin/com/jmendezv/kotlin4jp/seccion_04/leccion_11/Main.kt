@@ -31,47 +31,47 @@ class SimpleClass
 * */
 
 final class Estudiante constructor(
-    val id: Long,
-    val nombre: String,
-    nota: Double,
-    var becado: Boolean = false
+   val id: Long,
+   val nombre: String,
+   nota: Double,
+   var becado: Boolean = false
 ) {
 
-    init {
-        println("Clase Estudiante instanciada")
-    }
+   init {
+      println("Clase Estudiante instanciada")
+   }
 
-    var nota: Double = if (nota in 0.0..10.0) nota else 0.0
+   var nota: Double = if (nota in 0.0..10.0) nota else 0.0
 
-    constructor(nombre: String) : this(Random.nextLong().absoluteValue, nombre, 0.0)
+   constructor(nombre: String) : this(Random.nextLong().absoluteValue, nombre, 0.0)
 
-    public fun obtieneBeca() = !becado && nota > 9.5
+   public fun obtieneBeca() = !becado && nota > 9.5
 
-    override fun toString(): String = """
+   override fun toString(): String = """
         Estudiant[id = $id, nombre = $nombre, nota = $nota, becado = ${if (becado) "Sí" else "No]"}
     """.trimIndent()
 
-    override fun hashCode(): Int = id.toInt()
+   override fun hashCode(): Int = id.toInt()
 
-    override fun equals(other: Any?): Boolean =
-        if (other is Estudiante) id == other.id else false
+   override fun equals(other: Any?): Boolean =
+      if (other is Estudiante) id == other.id else false
 
-    // Metodos estaticos
-    companion object Factory {
-        fun createInstance(nombre: String) = Estudiante(nombre)
-        fun comoAprobar() = "Estudiando mucho."
-    }
+   // Metodos estaticos
+   companion object Factory {
+      fun createInstance(nombre: String) = Estudiante(nombre)
+      fun comoAprobar() = "Estudiando mucho."
+   }
 
 }
 
 fun main() {
-    // En Kotlin no se requiere el operador 'new'
-    val sc = SimpleClass()
-    val e = Estudiante("Mariana")
-    e.nota = 9.9
-    println(e)
-    println(e.obtieneBeca())
-    println(Estudiante.comoAprobar())
-    val e2 = Estudiante.createInstance("Juan")
-    println(e2)
+   // En Kotlin no se requiere el operador 'new'
+   val sc = SimpleClass()
+   val e = Estudiante("Mariana")
+   e.nota = 9.9
+   println(e)
+   println(e.obtieneBeca())
+   println(Estudiante.comoAprobar())
+   val e2 = Estudiante.createInstance("Juan")
+   println(e2)
 }

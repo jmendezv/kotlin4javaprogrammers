@@ -4,7 +4,6 @@ import kotlin.math.PI
 import kotlin.math.pow
 import kotlin.math.sqrt
 
-
 /*
 * Aproximació de PI = 3.14159264498239
 *
@@ -12,11 +11,11 @@ import kotlin.math.sqrt
 *
 * */
 fun aproximaPi(): Double {
-    var MIPI = 0.0
-    for (i in 1..Int.MAX_VALUE) {
-        MIPI += 1 / (i.toDouble().pow(2.0))
-    }
-    return sqrt(6 * MIPI)
+   var MIPI = 0.0
+   for (i in 1..Int.MAX_VALUE) {
+      MIPI += 1 / (i.toDouble().pow(2.0))
+   }
+   return sqrt(6 * MIPI)
 }
 
 /*
@@ -25,19 +24,20 @@ fun aproximaPi(): Double {
 *
 * 3.1415926531451195
 *
-* Aproximación a PI según Eulier
+* Aproximación a PI según Eulier mediante recursividad de cola
+*
 * */
 tailrec fun aproximaPiRec(
-    acum: Double = 0.0,
-    iter: Int = Int.MAX_VALUE
+   acum: Double = 0.0,
+   iter: Int = Int.MAX_VALUE
 ): Double = if (iter == 0)
-    sqrt(6 * acum)
+   sqrt(6 * acum)
 else
-    aproximaPiRec(acum + 1.0 / iter.toDouble().pow(2), iter - 1)
+   aproximaPiRec(acum + 1.0 / iter.toDouble().pow(2), iter - 1)
 
 
 fun main() {
-    println(aproximaPi())
-    println(aproximaPiRec())
-    println(PI)
+   println(aproximaPi())
+   println(aproximaPiRec())
+   println(PI)
 }

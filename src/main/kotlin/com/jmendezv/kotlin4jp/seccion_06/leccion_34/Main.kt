@@ -6,18 +6,18 @@ package com.jmendezv.kotlin4jp.seccion_06.leccion_34
 * Todos los operadores se pueden adaptar a nuestras clases
 * */
 
-data class Punto(val X: Int = 0, val Y: Int = 0)
+data class Punto(val x: Int = 0, val y: Int = 0)
 
 infix operator fun Punto.plus(punto: Punto): Punto =
-    Punto(this.X + punto.X, this.Y + punto.Y)
+   Punto(this.x + punto.x, this.y + punto.y)
 
 fun main() {
-    val p1 = Punto(1, 1)
-    val p2 = Punto(2, 3)
-    // La función plus se puede usar de tres formas
-    val p3 = p1.plus(p2)
-    val p4 = p1 plus p2
-    val p5 = p1 + p2
-    println(p3)
-    println(p4)
+   val p1 = Punto(1, 1)
+   val p2 = Punto(2, 3)
+   // La función plus se puede usar de tres formas
+   val p3 = p1.plus(p2)
+   val p4 = p1 plus p2
+   val p5 = p1 + p2
+   println(p3)
+   println(p4)
 }

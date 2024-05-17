@@ -13,7 +13,7 @@ fun g(): Unit {}
 
 // Sintaxis 'tradicional'
 fun doble_v1(value: Int): Int {
-    return value * 2
+   return value * 2
 }
 
 // Sintaxis 'abreviada' y valor por defecto
@@ -24,8 +24,8 @@ fun doble_v3(value: Int = 0) = value * 2
 
 
 fun main() {
-    println(doble_v1(2))
-    println(doble_v2())
-    // Paso de argumentos por nombre
-    println(doble_v3(value = 3))
+   println(doble_v1(2))
+   println(doble_v2())
+   // Paso de argumentos por nombre
+   println(doble_v3(value = 3))
 }

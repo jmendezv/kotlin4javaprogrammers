@@ -11,11 +11,11 @@ import kotlin.reflect.KFunction
 class UnaClaseCualquiera
 
 fun main() {
-    val classKotlin: KClass<UnaClaseCualquiera> = UnaClaseCualquiera::class
-    val classJava: Class<UnaClaseCualquiera> = UnaClaseCualquiera::class.java
-    val funcion: KFunction<UnaClaseCualquiera> = ::UnaClaseCualquiera
-    println(classKotlin.isFinal)
-    println(classKotlin.qualifiedName)
-    println(classJava.canonicalName)
-    println(funcion.name)
+   val classKotlin: KClass<UnaClaseCualquiera> = UnaClaseCualquiera::class
+   val classJava: Class<UnaClaseCualquiera> = UnaClaseCualquiera::class.java
+   val funcion: KFunction<UnaClaseCualquiera> = ::UnaClaseCualquiera
+   println(classKotlin.isFinal)
+   println(classKotlin.qualifiedName)
+   println(classJava.canonicalName)
+   println(funcion.name)
 }
