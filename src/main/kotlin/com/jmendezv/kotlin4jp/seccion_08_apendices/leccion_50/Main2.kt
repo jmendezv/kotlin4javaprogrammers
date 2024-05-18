@@ -6,32 +6,32 @@ import kotlin.time.Duration.Companion.seconds
 import kotlin.time.DurationUnit
 
 fun main() {
-    /*
-    * Con los objetos Duration, se pueden hacer operaciones aritméticas basicas.
-    * */
-    val fiveSeconds: Duration = 5.seconds
-    val thirtySeconds: Duration = 30.seconds
+   /*
+   * Con los objetos Duration, se pueden hacer operaciones aritméticas basicas.
+   * */
+   val fiveSeconds: Duration = 5.seconds
+   val thirtySeconds: Duration = 30.seconds
 
-    println(fiveSeconds + thirtySeconds)
+   println(fiveSeconds + thirtySeconds)
 // 35s
-    println(thirtySeconds - fiveSeconds)
+   println(thirtySeconds - fiveSeconds)
 // 25s
-    println(fiveSeconds * 2)
+   println(fiveSeconds * 2)
 // 10s
-    println(thirtySeconds / 2)
+   println(thirtySeconds / 2)
 // 15s
-    println(thirtySeconds / fiveSeconds)
+   println(thirtySeconds / fiveSeconds)
 // 6.0
-    println(-thirtySeconds)
+   println(-thirtySeconds)
 // -30s
-    println((-thirtySeconds).absoluteValue)
+   println((-thirtySeconds).absoluteValue)
 // 30s
-    /*
-    * La función toString() permite pasar de una unidad a otra
-    * */
-    println(5887.milliseconds.toString(DurationUnit.SECONDS, 2))
-    /*
-    * La función toIsoString() permite obtener una representación compatible con la norma ISO-8601
-    * */
-    println(86420.seconds.toIsoString()) // PT24H0M20S
+   /*
+   * La función toString() permite pasar de una unidad a otra
+   * */
+   println(5887.milliseconds.toString(DurationUnit.SECONDS, 2))
+   /*
+   * La función toIsoString() permite obtener una representación compatible con la norma ISO-8601
+   * */
+   println(86420.seconds.toIsoString()) // PT24H0M20S
 }
