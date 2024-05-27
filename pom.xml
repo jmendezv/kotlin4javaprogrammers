@@ -116,6 +116,12 @@
             <version>8.4.0</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.ktorm/ktorm-core -->
+        <dependency>
+            <groupId>org.ktorm</groupId>
+            <artifactId>ktorm-core</artifactId>
+            <version>4.0.0</version>
+        </dependency>
 
 
     </dependencies>
